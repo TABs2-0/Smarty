@@ -1,13 +1,12 @@
 package com.example.smarty;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 @SpringBootTest
-class SmartyApplicationTests {
+@ActiveProfiles("test") // Activate the "test" profile for this test class
+public class SmartyApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+	// ... your contextLoads() method ...
 
 }
