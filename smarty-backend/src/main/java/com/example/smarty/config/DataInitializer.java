@@ -19,14 +19,14 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // Check if admin user already exists to prevent duplicates on every startup
         // FIX: Ensure the email in findByEmail matches the email being created
-        if (userRepository.findByEmail("tabs@gmail.com").isEmpty()) { // <--- Corrected this line
+        if (userRepository.findByEmail("tabs.jsx@gmail.com").isEmpty()) { // <--- Corrected this line
             var adminUser = User.builder()
-                    .email("tabs@gmail.com")
+                    .email("tabs.jsx@gmail.com")
                     .password(passwordEncoder.encode("123")) // USE A STRONG PASSWORD IN PRODUCTION!
                     .role(Role.ADMIN)
                     .build();
             userRepository.save(adminUser);
-            System.out.println("Admin user created: tabs@gmail.com");
+            System.out.println("Admin user created: tabs.jsx@gmail.com");
         }
 
         // Check if regular user already exists

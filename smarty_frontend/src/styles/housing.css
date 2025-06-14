@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom font stack or text smoothing if needed */
+  body {
+    @apply antialiased text-gray-800 bg-gray-50;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .card-icon {
+    @apply h-6 w-6 mb-3 text-cityguide-purple;
+  }
+
+  .card-title {
+    @apply text-base font-semibold text-gray-800 mb-1;
+  }
+
+  .card-description {
+    @apply text-sm text-gray-600;
+  }
+
+  .faq-button {
+    @apply flex justify-between items-center w-full text-left font-semibold text-base text-gray-800 focus:outline-none;
+  }
+
+  .faq-answer {
+    @apply mt-2 text-sm text-gray-700 leading-relaxed;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold mb-4 text-cityguide-purple;
+  }
+
+  .resource-link {
+    @apply bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group;
+  }
+
+  .resource-title {
+    @apply text-base font-semibold mb-1 text-gray-800 group-hover:text-cityguide-purple transition-colors duration-200;
+  }
+
+  .resource-description {
+    @apply text-sm text-gray-600 group-hover:text-gray-700;
+  }
+
+  .cta-banner {
+    @apply rounded-xl p-6 bg-gradient-to-r from-purple-500 to-cityguide-purple text-white text-center shadow-md;
+  }
+
+  .cta-title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .cta-description {
+    @apply text-base opacity-90 mb-4;
+  }
+
+  .cta-button {
+    @apply bg-white text-cityguide-purple font-medium py-2 px-6 rounded-full shadow hover:bg-gray-100 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-cityguide-purple {
+    color: #8b5cf6; /* You can override this with your actual branding color */
+  }
+
+  .bg-cityguide-purple {
+    background-color: #8b5cf6;
+  }
+
+  .from-cityguide-purple {
+    --tw-gradient-from: #8b5cf6;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(139 92 246 / 0));
+  }
+
+  .to-cityguide-purple {
+    --tw-gradient-to: #6d28d9;
+  }
+}

@@ -1,0 +1,13 @@
+
+
+/* Only override what is needed, and avoid global selectors like body, :root */
+
+body.custom-body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+button.custom-btn {
+  background-color: #1a1a1a;
+  color: white;
+}
